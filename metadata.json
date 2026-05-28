@@ -1,0 +1,6 @@
+{
+  "name": "Courtallam Cottage",
+  "description": "A modern mobile-first business website for Courtallam Cottage, a peaceful and natural premium homestay in the Western Ghats.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

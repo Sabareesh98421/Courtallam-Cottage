@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserve Cottage Online | Courtallam Cottage Boutique Homestay</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#344E41',
+            'primary-container': '#23382c',
+            secondary: '#588157',
+            background: '#FDFBF7',
+            surface: '#F4F0E6',
+            'on-surface-variant': '#414E45',
+            tertiary: '#1B2621',
+            wood: '#A3B18A',
+            ink: '#1B2621'
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['"Inter"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-[#fbf9f5] text-[#1b1c1a]">
+
+  <!-- Reusable Dynamic Header Container -->
+  <div id="header-container"></div>
+
+  <!-- Page Header Hero -->
+  <section class="bg-primary text-white py-20 px-6 relative overflow-hidden">
+    <!-- Fine-grain botanical forest backdrop -->
+    <div class="absolute inset-0">
+      <img 
+        src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
+        alt="Premium wood chalets cozy bed layout" 
+        referrerpolicy="no-referrer"
+        class="w-full h-full object-cover opacity-15" />
+      <div class="absolute inset-0 bg-gradient-to-t from-background via-black/30 to-[#173124]/40"></div>
+    </div>
+
+    <div class="max-w-4xl mx-auto text-center space-y-6 relative z-10 animate-fade-in">
+      <span class="text-xs uppercase tracking-widest font-bold text-secondary bg-surface/10 border border-white/10 px-4 py-1.5 rounded-full inline-block">
+        Book stay
+      </span>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-black text-white tracking-tight">
+        Secure Your Cottage Reservation
+      </h1>
+      <p class="text-white/85 max-w-xl mx-auto text-sm md:text-base leading-relaxed font-sans">
+        Zero upfront payment loops are requested now. Fill in check-in days and details below to lock dates with our concierge team instantly.
+      </p>
+    </div>
+  </section>
+
+  <!-- Interactive booking area split -->
+  <section class="max-w-7xl mx-auto px-6 py-20">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 font-sans items-start">
+      
+      <!-- Left side: The reservation form card (7 cols) -->
+      <div class="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-surface lg:col-span-7 space-y-8">
+        <div>
+          <span class="text-xs uppercase tracking-widest font-bold text-secondary">Dates selection</span>
+          <h2 class="text-2xl md:text-3xl font-serif font-black text-primary leading-tight mt-1">Cottage Booking Form</h2>
+          <p class="text-on-surface-variant text-xs mt-2 leading-relaxed">
+            Specify check-on schedules and coordinate suite sizes. The form calculates live prices dynamically in the breakout dashboard.
+          </p>
+        </div>
+
+        <!-- Render container for dynamic JavaScript form -->
+        <div id="booking-form-container"></div>
+      </div>
+
+      <!-- Right side: Far breakout card & support policies (5 cols) -->
+      <div class="lg:col-span-5 space-y-8">
+        
+        <!-- Breakout calculated price indicator panel -->
+        <div id="booking-breakout-container" class="space-y-4"></div>
+
+        <!-- Support Policies card list -->
+        <div class="bg-white p-6 md:p-8 rounded-2xl border border-surface space-y-4 shadow-sm text-[#1b1c1a]/85 text-xs md:text-sm font-sans leading-relaxed">
+          <h3 class="text-sm font-bold uppercase tracking-wider text-primary pb-3 border-b border-surface flex items-center gap-2">
+            <span data-icon="parking" class="w-5 h-5 flex-shrink-0 text-secondary"></span>
+            Estate Policies Guidelines
+          </h3>
+          
+          <ul class="space-y-3.5 text-on-surface-variant">
+            <li class="flex items-start gap-2.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-secondary mt-2 flex-shrink-0"></span>
+              <span><strong>Check-In Timeline</strong>: Check-in hour is scheduled at <strong>13:00 Hrs (1:00 PM)</strong>. Safe corporate luggage storage is available for early arrivals.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-secondary mt-2 flex-shrink-0"></span>
+              <span><strong>Check-Out Timeline</strong>: Check-out schedule terminates at <strong>11:00 Hrs (11:00 AM)</strong>. Late check-out requests are subject to upcoming suite blocks.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-secondary mt-2 flex-shrink-0"></span>
+              <span><strong>Deposit Policy</strong>: We collect zero deposit on this static site. Reservation details coordinate with our WhatsApp team. To seal peak-monsoon dates, a 50% reservation deposit may be asked via UPI or Bank routing.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-secondary mt-2 flex-shrink-0"></span>
+              <span><strong>Cardamom Trails</strong>: No smoking is permitted inside cottage wooden bedroom interiors, verifying organic air quality tags for overall resort health. Safe smoking ash trays are placed on outdoor veranda patios.</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Reusable Dynamic Footer Container -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js?v=2026052801"></script>
+  <script src="components/header.js"></script>
+  <script src="components/footer.js"></script>
+  <script src="components/booking-form.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Wire up check-out date dynamic price calculates
+      renderBookingForm("booking-form-container", "booking-breakout-container");
+    });
+  </script>
+</body>
+</html>

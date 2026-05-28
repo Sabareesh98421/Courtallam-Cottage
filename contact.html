@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get In Touch & Contacts | Courtallam Cottage Premium Homestay</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#344E41',
+            'primary-container': '#23382c',
+            secondary: '#588157',
+            background: '#FDFBF7',
+            surface: '#F4F0E6',
+            'on-surface-variant': '#414E45',
+            tertiary: '#1B2621',
+            wood: '#A3B18A',
+            ink: '#1B2621'
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['"Inter"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-[#fbf9f5] text-[#1b1c1a]">
+
+  <!-- Reusable Dynamic Header Container -->
+  <div id="header-container"></div>
+
+  <!-- Page Header Hero -->
+  <section class="bg-primary text-white py-20 md:py-32 px-6 relative overflow-hidden">
+    <div class="absolute inset-0">
+      <img 
+        src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
+        alt="Lush dining area with botanical trails" 
+        referrerpolicy="no-referrer"
+        class="w-full h-full object-cover opacity-20" />
+      <div class="absolute inset-0 bg-gradient-to-t from-background via-black/30 to-[#173124]/40"></div>
+    </div>
+
+    <div class="max-w-4xl mx-auto text-center space-y-6 relative z-10 animate-fade-in">
+      <span class="text-xs uppercase tracking-widest font-bold text-secondary bg-surface/10 border border-white/10 px-4 py-1.5 rounded-full inline-block">
+        Connect With Us
+      </span>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-black text-white tracking-tight">
+        Your Gateway to Rejuvenation Awaits
+      </h1>
+      <p class="text-white/85 max-w-xl mx-auto text-sm md:text-base leading-relaxed font-sans">
+        Have questions about booking availability, corporate retreats, local monsoon conditions, or transport bookings? Our family is happy to guide you.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main contact sections split grid -->
+  <section class="max-w-7xl mx-auto px-6 py-20 font-sans">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+      
+      <!-- Left side: Information and coordinates metadata cards -->
+      <div class="space-y-10">
+        <div class="space-y-4">
+          <span class="text-xs uppercase tracking-widest font-bold text-secondary">Contact Details</span>
+          <h2 class="text-3xl md:text-4xl font-serif font-black text-primary leading-tight">
+            Let's Start Preparing Your Quiet Vacation
+          </h2>
+          <p class="text-on-surface-variant text-sm md:text-base leading-relaxed font-sans">
+            We operate around-the-clock check-in support with advanced care managers. Write to us, use direct telephone loops, or click below for instant interactive support.
+          </p>
+        </div>
+
+        <!-- Coordinates list cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 font-sans text-sm text-on-surface-variant">
+          
+          <div class="bg-white p-6 rounded-2xl border border-surface space-y-3 shadow-sm">
+            <div class="w-10 h-10 rounded-xl bg-surface text-secondary flex items-center justify-center">
+              <span data-icon="phone" class="w-5 h-5"></span>
+            </div>
+            <h3 class="font-serif font-bold text-lg text-primary leading-none">Call Our Desk</h3>
+            <p class="text-xs text-on-surface-variant">General consults and travel coordinates:</p>
+            <a href="tel:+919842127812" class="font-bold text-primary hover:text-secondary block font-sans">+91 98421 27812</a>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-surface space-y-3 shadow-sm">
+            <div class="w-10 h-10 rounded-xl bg-surface text-secondary flex items-center justify-center">
+              <span data-icon="email" class="w-5 h-5"></span>
+            </div>
+            <h3 class="font-serif font-bold text-lg text-primary leading-none">Email Stay Inbox</h3>
+            <p class="text-xs text-on-surface-variant">Group event booking and corporate rates:</p>
+            <a href="mailto:stay@courtallamcottage.com" class="font-bold text-primary hover:text-secondary block font-sans truncate">stay@courtallamcottage.com</a>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-surface space-y-3 shadow-sm sm:col-span-2">
+            <div class="w-10 h-10 rounded-xl bg-surface text-secondary flex items-center justify-center">
+              <span data-icon="location" class="w-5 h-5"></span>
+            </div>
+            <h3 class="font-serif font-bold text-lg text-primary leading-none">Physical Homestead Address</h3>
+            <p class="text-xs text-on-surface-variant">Upper Courtallam Hill Ridge corridor:</p>
+            <p class="font-medium text-primary font-sans leading-relaxed">
+              14/3, Shenbagadevi Temple Road, Upper Courtallam, Tenkasi District, Tamil Nadu - 627802
+            </p>
+          </div>
+
+        </div>
+
+        <!-- WhatsApp Quick Link Panel -->
+        <div class="p-6 rounded-3xl bg-[#25D366]/5 border border-[#25D366]/20 flex flex-col sm:flex-row items-center gap-6">
+          <div class="w-12 h-12 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-lg">
+            <span data-icon="whatsapp" class="w-6 h-6"></span>
+          </div>
+          <div class="flex-1 space-y-1 text-center sm:text-left">
+            <h4 class="font-serif font-bold text-lg text-primary">Chat Live with Concierge</h4>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Skip long forms. Text us instantly on WhatsApp for quick pricing details and room options confirmation.</p>
+          </div>
+          <a href="https://wa.me/919842127812?text=Hello%20Courtallam%20Cottage%20team!%20I'd%20love%20to%20know%20availability%20for%20private%20rooms." target="_blank" rel="noopener" class="px-5 py-3 bg-[#25D366] hover:bg-[#20ba59] active:scale-95 text-white font-bold rounded-xl text-center text-xs tracking-wider uppercase font-sans shadow-md hover:scale-[1.01] transition-transform cursor-pointer">
+            Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Right side: Enquiry contact form interactive block -->
+      <div class="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-surface space-y-6">
+        <div>
+          <span class="text-xs uppercase tracking-widest font-bold text-secondary">Leave a message</span>
+          <h2 class="text-2xl md:text-3xl font-serif font-black text-primary leading-tight mt-1">General Enquiry Form</h2>
+          <p class="text-on-surface-variant text-xs mt-2 font-sans">
+            Have a specialized reservation question? Pop details below, and our caretakers will reply in under 2 hours.
+          </p>
+        </div>
+
+        <form id="contact-enquiry-form" class="space-y-6">
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="contact-name" class="block text-xs uppercase tracking-wider font-semibold text-primary mb-2">Your Name</label>
+              <input type="text" id="contact-name" name="name" required placeholder="Aditya" class="w-full bg-surface border border-surface rounded-xl px-4 py-3.5 text-sm font-medium text-primary placeholder-on-surface-variant/40 focus:outline-none focus:ring-2 focus:ring-primary/20" />
+            </div>
+            <div>
+              <label for="contact-email" class="block text-xs uppercase tracking-wider font-semibold text-primary mb-2">Email Address</label>
+              <input type="email" id="contact-email" name="email" required placeholder="aditya@example.com" class="w-full bg-surface border border-surface rounded-xl px-4 py-3.5 text-sm font-medium text-primary placeholder-on-surface-variant/40 focus:outline-none focus:ring-2 focus:ring-primary/20" />
+            </div>
+          </div>
+
+          <div>
+            <label for="contact-subject" class="block text-xs uppercase tracking-wider font-semibold text-primary mb-2">Subject Of Consultation</label>
+            <input type="text" id="contact-subject" name="subject" required placeholder="Group booking / Monsoon queries" class="w-full bg-surface border border-surface rounded-xl px-4 py-3.5 text-sm font-medium text-primary placeholder-on-surface-variant/40 focus:outline-none focus:ring-2 focus:ring-primary/20" />
+          </div>
+
+          <div>
+            <label for="contact-message" class="block text-xs uppercase tracking-wider font-semibold text-primary mb-2">Your Detailed inquiry</label>
+            <textarea id="contact-message" name="message" required rows="5" placeholder="Hi! I am looking to book rooms for a family reunion of 8 adults. Can you structure a localized catering menu?" class="w-full bg-surface border border-surface rounded-xl px-4 py-3.5 text-sm font-medium text-primary placeholder-on-surface-variant/40 focus:outline-none focus:ring-2 focus:ring-primary/20 resize-none"></textarea>
+          </div>
+
+          <button type="submit" class="w-full py-4 bg-primary text-white text-xs uppercase tracking-widest font-semibold rounded-xl hover:bg-primary/95 shadow transition-all hover:scale-[1.01] active:scale-95 duration-200 cursor-pointer flex items-center justify-center gap-2">
+            <span data-icon="email" class="w-5 h-5 flex-shrink-0 text-white"></span>
+            Send Inquiry via WhatsApp Router
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Embedded Map Section Block -->
+  <section class="bg-surface py-20">
+    <div class="max-w-7xl mx-auto px-6 space-y-12">
+      <div class="text-center max-w-xl mx-auto space-y-3">
+        <span class="text-xs uppercase tracking-widest font-bold text-secondary">Our Geographical Context</span>
+        <h2 class="text-2xl md:text-3xl font-serif font-black text-primary">Upper Courtallam Foothills Map</h2>
+        <p class="text-on-surface-variant text-xs font-sans">
+          Arrive via direct rail loops to Tenkasi Junction (6km) or fly to Tuticorin Airport (2h drive). Scroll details or tap to trigger direct driving navigation.
+        </p>
+      </div>
+
+
+
+<!-- Embedded Google Map -->
+<div class="rounded-3xl border border-surface overflow-hidden shadow-sm relative h-[450px] bg-white">
+
+  <!-- Real Google Maps Embed -->
+  <iframe
+    src="https://www.google.com/maps?q=Courtallam%20Cottage&output=embed"
+    class="absolute inset-0 w-full h-full border-0"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    allowfullscreen>
+  </iframe>
+<!-- Interactive Map Pin -->
+<div class="absolute left-[58%] top-[43%] z-20">
+
+  <!-- Pulse -->
+  <span class="absolute inline-flex h-12 w-12 rounded-full bg-secondary/40 animate-ping"></span>
+
+  <!-- Pin -->
+  <div class="relative w-12 h-12 rounded-full bg-secondary shadow-2xl border-4 border-white flex items-center justify-center animate-bounce">
+    <span data-icon="location" class="w-6 h-6 text-white"></span>
+  </div>
+
+  <!-- Label -->
+  <div class="absolute top-14 left-1/2 -translate-x-1/2 whitespace-nowrap px-4 py-1.5 rounded-full bg-primary text-white text-[10px] uppercase tracking-widest font-bold shadow-xl">
+    Courtallam Cottage
+  </div>
+
+</div>
+  <!-- Dark overlay for readability -->
+  <div class="absolute inset-0 bg-black/10 pointer-events-none"></div>
+
+  <!-- Float Map Fact Board -->
+  <div class="relative z-10 h-full flex items-end p-8 md:p-12">
+    <div class="bg-[#173124]/95 text-white p-6 md:p-8 rounded-2xl max-w-md border border-white/10 space-y-4 shadow-xl backdrop-blur-sm">
+      <div class="flex items-center gap-2">
+        <span data-icon="location" class="w-5 h-5 text-secondary"></span>
+        <h4 class="font-serif font-bold text-lg">Detailed Driving Landmark</h4>
+      </div>
+
+      <p class="text-xs text-white/80 leading-relaxed font-sans">
+        Proceed up the Shenbagadevi Temple pathway road just beyond the Forest Gate checkpost. Follow our wooden botanical road tags for 400 meters.
+      </p>
+
+      <a
+        href="https://maps.app.goo.gl/ikgFgGb4HUN9gTSt8"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="w-full text-center block py-3 bg-secondary text-white text-xs uppercase tracking-widest font-semibold rounded-xl hover:bg-secondary/95 transition-transform duration-300 hover:scale-[1.01] cursor-pointer shadow"
+      >
+        Open in Google Maps
+      </a>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </section>
+
+  <!-- Reusable Dynamic Footer Container -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js?v=2026052801"></script>
+  <script src="components/header.js"></script>
+  <script src="components/footer.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Form submit action linking WhatsApp
+      const eqnForm = document.getElementById("contact-enquiry-form");
+      if (eqnForm) {
+        eqnForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          
+          const formData = new FormData(eqnForm);
+          const name = formData.get("name");
+          const email = formData.get("email");
+          const subject = formData.get("subject");
+          const message = formData.get("message");
+
+          const waText = `✏️ GENERAL INQUIRY ✏️
+-----------------------------------------
+Name: ${name}
+Email: ${email}
+Subject: ${subject}
+Message: ${message}
+-----------------------------------------
+Hello Courtallam Cottage team! I am writing using your web contact form. Please confirm parameters when free. Thank you!`;
+
+          window.open(BUSINESS_CONFIG.getWhatsAppLink(waText), "_blank");
+        });
+      }
+    });
+  </script>
+</body>
+</html>

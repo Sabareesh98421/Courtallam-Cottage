@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boutique Suites & Private Cottages | Courtallam Cottage Homestay</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#344E41',
+            'primary-container': '#23382c',
+            secondary: '#588157',
+            background: '#FDFBF7',
+            surface: '#F4F0E6',
+            'on-surface-variant': '#414E45',
+            tertiary: '#1B2621',
+            wood: '#A3B18A',
+            ink: '#1B2621'
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['"Inter"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-[#fbf9f5] text-[#1b1c1a]">
+
+  <!-- Reusable Dynamic Header Container -->
+  <div id="header-container"></div>
+
+  <!-- Page Header Hero -->
+  <section class="bg-primary text-white py-20 md:py-32 px-6 relative overflow-hidden">
+    <!-- Fine-grain botanical forest backdrop -->
+    <div class="absolute inset-0">
+      <img 
+        src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
+        alt="Spectacular stone cottage patio views overlooking forest stream" 
+        referrerpolicy="no-referrer"
+        class="w-full h-full object-cover opacity-20" />
+      <div class="absolute inset-0 bg-gradient-to-t from-background via-black/30 to-[#173124]/40"></div>
+    </div>
+
+    <div class="max-w-4xl mx-auto text-center space-y-6 relative z-10 animate-fade-in">
+      <span class="text-xs uppercase tracking-widest font-bold text-secondary bg-surface/10 border border-white/10 px-4 py-1.5 rounded-full inline-block">
+        Suites & Cottages
+      </span>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-black text-white tracking-tight">
+        Private Sanctuaries Framed by Nature
+      </h1>
+      <p class="text-white/85 max-w-xl mx-auto text-sm md:text-base leading-relaxed font-sans">
+        Experience a peaceful South Asian escape where rustic stone masonry, premium handcrafted teakwood furniture, and refreshing outdoor baths seamlessly align.
+      </p>
+    </div>
+  </section>
+
+  <!-- Section 1: Dynamic Room Cards List -->
+  <section class="max-w-7xl mx-auto px-6 py-20">
+    <div class="text-center max-w-2xl mx-auto space-y-4 mb-16">
+      <span class="text-xs uppercase tracking-widest font-bold text-secondary block">Pick Your Dream Chalet</span>
+      <h2 class="text-3xl md:text-5xl font-serif font-black text-primary tracking-tight">
+        Explore Our Boutique Living Chambers
+      </h2>
+      <p class="text-on-surface-variant text-sm font-sans">
+        Browse sizes, beds, check-out options, and verified amenities details. Tap selectively dynamically to secure direct reservation routing with our caretakers.
+      </p>
+    </div>
+
+    <!-- JavaScript populates all 4 rooms into this grid container -->
+    <div id="all-rooms-list" class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12"></div>
+  </section>
+
+  <!-- Section 2: Comparison Specifications Grid -->
+  <section class="bg-surface py-20">
+    <div class="max-w-7xl mx-auto px-6 space-y-12">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-4">
+        <span class="text-xs uppercase tracking-widest font-bold text-secondary block">Side-by-side Layout Metrics</span>
+        <h2 class="text-3xl md:text-4xl font-serif font-black text-primary tracking-tight">
+          Cottage Configuration comparison
+        </h2>
+        <p class="text-on-surface-variant text-sm font-sans">
+          Perfect clarity to select the ideal room size and bed layout matching your vacation family scale.
+        </p>
+      </div>
+
+      <!-- Descriptive Table responsive layout -->
+      <div class="overflow-x-auto rounded-2xl border border-surface bg-white shadow-sm">
+        <table class="w-full text-left border-collapse font-sans text-sm">
+          
+          <thead>
+            <tr class="bg-primary text-white uppercase tracking-wider text-xs border-b border-surface">
+              <th class="p-6 font-bold">Suite Space</th>
+              <th class="p-6 font-bold">Max Occupancy</th>
+              <th class="p-6 font-bold">Bed Dimensions</th>
+              <th class="p-6 font-bold">Views</th>
+              <th class="p-6 font-bold">Signature Feature</th>
+              <th class="p-6 font-bold">Basics Rate</th>
+            </tr>
+          </thead>
+          
+          <tbody class="divide-y divide-surface text-on-surface-variant font-medium">
+            <tr>
+              <td class="p-6 font-bold text-primary">Orchard Deluxe Estate Room</td>
+              <td class="p-6">2 Guests</td>
+              <td class="p-6">King Bed</td>
+              <td class="p-6">Organic Plantations & Valleys</td>
+              <td class="p-6">Handmade terracotta tilling</td>
+              <td class="p-6 text-primary font-bold">From ₹3,500 / night</td>
+            </tr>
+            <tr>
+              <td class="p-6 font-bold text-primary">The Riverstream Cottage Suite</td>
+              <td class="p-6">3 Guests</td>
+              <td class="p-6">Super King Bed</td>
+              <td class="p-6">Private Stream & Forest canopy</td>
+              <td class="p-6">Semi-outdoor stone luxury shower</td>
+              <td class="p-6 text-primary font-bold">From ₹5,500 / night</td>
+            </tr>
+            <tr>
+              <td class="p-6 font-bold text-primary">Shenbagam Family Stone Villa</td>
+              <td class="p-6">5 Guests</td>
+              <td class="p-6">2 Kings + 1 Daybed</td>
+              <td class="p-6">Aromatic Gardens & High peaks</td>
+              <td class="p-6">Traditional wooden porch swing</td>
+              <td class="p-6 text-primary font-bold">From ₹8,000 / night</td>
+            </tr>
+            <tr>
+              <td class="p-6 font-bold text-primary">The Whispering Canopy Penthouse</td>
+              <td class="p-6">2 Guests</td>
+              <td class="p-6">Plush California King</td>
+              <td class="p-6">360-degree mountain panormics</td>
+              <td class="p-6">Double skylight glass sky-walls</td>
+              <td class="p-6 text-primary font-bold">From ₹6,500 / night</td>
+            </tr>
+          </tbody>
+
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Reusable Call To Action Section -->
+  <section class="max-w-7xl mx-auto px-6 py-20 md:py-28">
+    <div id="rooms-cta"></div>
+  </section>
+
+  <!-- Reusable Dynamic Footer Container -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js?v=2026052801"></script>
+  <script src="components/header.js"></script>
+  <script src="components/footer.js"></script>
+  <script src="components/room-card.js"></script>
+  <script src="components/cta-section.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Direct render call of all rooms
+      renderRoomCards("all-rooms-list"); // Rendering ALL rooms (limit omitted)
+      renderEcoSanctuaryCTA("rooms-cta");
+    });
+  </script>
+</body>
+</html>

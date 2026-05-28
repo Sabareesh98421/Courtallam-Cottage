@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courtallam Cottage | Luxury Boutique Homestay Western Ghats</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#344E41',
+            'primary-container': '#23382c',
+            secondary: '#588157',
+            background: '#FDFBF7',
+            surface: '#F4F0E6',
+            'on-surface-variant': '#414E45',
+            tertiary: '#1B2621',
+            wood: '#A3B18A',
+            ink: '#1B2621'
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['"Inter"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-[#fbf9f5] text-[#1b1c1a]">
+
+  <!-- Reusable Dynamic Header Container -->
+  <div id="header-container"></div>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[85vh] lg:h-[90vh] flex items-center justify-center overflow-hidden bg-primary py-20 px-6">
+    <!-- Immersive Backdrop Image with forest opacity -->
+    <div class="absolute inset-0">
+      <img 
+        src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=85" 
+        alt="Western Ghats foggy forest canopy homestay" 
+        referrerpolicy="no-referrer"
+        class="w-full h-full object-cover opacity-35" />
+      <div class="absolute inset-0 bg-gradient-to-t from-background via-black/40 to-[#173124]/40"></div>
+    </div>
+
+    <!-- Inside Content Card -->
+    <div class="max-w-7xl mx-auto w-full relative z-10 text-center space-y-8 animate-fade-in">
+      <span class="text-xs uppercase tracking-widest font-bold text-secondary bg-surface/10 border border-white/15 px-4 py-1.5 rounded-full inline-block">
+        🌿 South India's Premium Monsoon Retreat
+      </span>
+      
+      <h2 class="text-4xl sm:text-5xl lg:text-7xl font-serif font-black text-white leading-tight tracking-tight max-w-4xl mx-auto">
+        Where the Western Ghats Waterfalls Meet Luxurious Living
+      </h2>
+
+      <p class="text-white/80 max-w-2xl mx-auto text-sm sm:text-base lg:text-lg leading-relaxed font-sans">
+        Escape the clutter of city routine to our private organic plantations and mountain mist valleys. Located exactly 7 minutes walking path from Courtallam's historic Five Waterfalls.
+      </p>
+
+      <!-- Horizontal Hero Interactive Scheduler search panel -->
+      <div class="bg-white/95 backdrop-blur shadow-2xl rounded-3xl p-6 max-w-4xl mx-auto border border-surface mt-10">
+        <form action="booking.html" method="GET" class="grid grid-cols-1 md:grid-cols-4 gap-4 items-end text-left">
+          
+          <div>
+            <label class="block text-[10px] font-bold uppercase tracking-wider text-primary mb-1.5">Check-In</label>
+            <input type="date" name="checkIn" id="hero-in" required class="w-full bg-surface text-primary rounded-xl px-4 py-3 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-primary/20 appearance-none pointer-events-auto" />
+          </div>
+
+          <div>
+            <label class="block text-[10px] font-bold uppercase tracking-wider text-primary mb-1.5">Check-Out</label>
+            <input type="date" name="checkOut" id="hero-out" required class="w-full bg-surface text-primary rounded-xl px-4 py-3 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-primary/20 appearance-none" />
+          </div>
+
+          <div>
+            <label class="block text-[10px] font-bold uppercase tracking-wider text-primary mb-1.5">Cottage Room</label>
+            <select name="room" class="w-full bg-surface text-primary rounded-xl px-4 py-3 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-primary/20 cursor-pointer">
+              <option value="">Any Premium Suite</option>
+              <option value="orchard-deluxe">Orchard Deluxe Estate</option>
+              <option value="riverstream-suite">Riverstream Cottage Suite</option>
+              <option value="shenbagam-family">Shenbagam Stone Villa</option>
+              <option value="canopy-penthouse">Whispering Canopy Penthouse</option>
+            </select>
+          </div>
+
+          <button type="submit" class="w-full py-3.5 rounded-xl bg-secondary hover:bg-secondary/95 text-white text-xs uppercase tracking-widest font-bold transition-all hover:scale-[1.01] active:scale-95 cursor-pointer">
+            Check Suites Availability
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Welcoming tagline and narrative Section -->
+  <section class="max-w-7xl mx-auto px-6 py-20 md:py-28">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      
+      <!-- Left text narrative -->
+      <div class="space-y-6">
+        <span class="text-xs uppercase tracking-widest font-bold text-secondary block">Introducing Courtallam Cottage</span>
+        <h3 class="text-3xl md:text-5xl font-serif font-black text-primary leading-tight">
+          Surround Yourself With Majestic Peaks & Aromatic Spice Breezes
+        </h3>
+        <p class="text-on-surface-variant text-sm md:text-base leading-relaxed font-sans">
+          Nestled among natural fruit plantations in Courtallam (Kuttralam), our private boutique eco-homestay delivers premium solace. Built with local materials (teakwood, high-grade basalt stone, and traditional terracotta floor tiling), each cottage honors organic estate layouts with contemporary resort interiors.
+        </p>
+        <p class="text-on-surface-variant text-sm border-l-4 border-secondary pl-4 py-1.5 italic font-sans">
+          "Wake up to cardamom fragrances, spot endemic forest birds, take private river walks, and indulge in delicious South Indian meals crafted on authentic banana leaf spreads."
+        </p>
+        <div class="pt-2">
+          <a href="about.html" class="inline-flex items-center gap-2 text-primary font-bold hover:text-secondary text-sm transition-colors uppercase tracking-widest">
+            Discover Our Heritage & Story
+            <span class="w-4 h-4" data-icon="chevron_right"></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right image stack (Aesthetic grid) -->
+      <div class="grid grid-cols-2 gap-4">
+        <div class="space-y-4">
+          <div class="rounded-2xl overflow-hidden aspect-[3/4]">
+            <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Beautiful forest mountain rivers" referrerpolicy="no-referrer" class="w-full h-full object-cover">
+          </div>
+          <div class="rounded-2xl overflow-hidden aspect-square">
+            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Dining courtyard setup" referrerpolicy="no-referrer" class="w-full h-full object-cover">
+          </div>
+        </div>
+        <div class="space-y-4 pt-8">
+          <div class="rounded-2xl overflow-hidden aspect-square">
+            <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Mist hovering mountains" referrerpolicy="no-referrer" class="w-full h-full object-cover">
+          </div>
+          <div class="rounded-2xl overflow-hidden aspect-[3/4]">
+            <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Premium wooden cottages interiors" referrerpolicy="no-referrer" class="w-full h-full object-cover">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Featured Suites Section -->
+  <section class="bg-surface py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-6 space-y-12">
+      
+      <div class="flex flex-col md:flex-row items-start md:items-end justify-between gap-6">
+        <div>
+          <span class="text-xs uppercase tracking-widest font-bold text-secondary block">Select Your Retreat Room</span>
+          <h2 class="text-3xl md:text-5xl font-serif font-black text-primary tracking-tight mt-1">
+            Featured Boutique Cottage Suites
+          </h2>
+        </div>
+        <a href="rooms.html" class="px-6 py-3 border border-primary text-primary hover:bg-primary hover:text-white rounded-full text-xs uppercase tracking-widest font-semibold transition-all">
+          Explore All Suite Spaces
+        </a>
+      </div>
+
+      <!-- Container in which JavaScript inserts room-cards -->
+      <div id="featured-rooms-list" class="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
+    </div>
+  </section>
+
+  <!-- Premium Estate Amenities -->
+  <section class="max-w-7xl mx-auto px-6 py-20 md:py-28">
+    <div class="text-center max-w-2xl mx-auto space-y-4 mb-16">
+      <span class="text-xs uppercase tracking-widest font-bold text-secondary block">Designed to Calm the Soul</span>
+      <h2 class="text-3xl md:text-5xl font-serif font-black text-primary tracking-tight">
+        Lush Amenities & Handcrafted Services
+      </h2>
+      <p class="text-on-surface-variant text-sm font-sans">
+        Immerse yourself of pristine resort benefits, where pristine sanitization joins naturally with rustic architectural components.
+      </p>
+    </div>
+
+    <!-- JavaScript populated list container -->
+    <div id="home-amenities-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"></div>
+  </section>
+
+  <!-- Dynamic Guest Reviews / Testimonials Section -->
+  <section class="bg-surface py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-6 space-y-16">
+      <div class="text-center max-w-2xl mx-auto space-y-4">
+        <span class="text-xs uppercase tracking-widest font-bold text-secondary block">Storie of Real Travelers</span>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif font-black text-primary tracking-tight">
+          What Guests Say About Courtallam Cottage
+        </h2>
+      </div>
+
+      <!-- Testimonial card lists -->
+      <div id="testimonials-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+    </div>
+  </section>
+
+  <!-- Gallery Grid Highlights -->
+  <section class="max-w-7xl mx-auto px-6 py-20 md:py-28 space-y-12">
+    <div class="flex flex-col md:flex-row items-start md:items-end justify-between gap-6">
+      <div>
+        <span class="text-xs uppercase tracking-widest font-bold text-secondary block">Breathtaking Visual Canvas</span>
+        <h2 class="text-3xl md:text-5xl font-serif font-black text-primary tracking-tight mt-1">
+          Lush Estate Atmosphere Preview
+        </h2>
+      </div>
+      <a href="gallery.html" class="px-6 py-3 border border-primary text-primary hover:bg-primary hover:text-white rounded-full text-xs uppercase tracking-widest font-semibold transition-all">
+        View Entire Gallery Tag Filters
+      </a>
+    </div>
+
+    <!-- Static showcase preview grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="rounded-2xl overflow-hidden aspect-square border border-surface bg-white relative group">
+        <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mountain valley highlights" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500">
+        <div class="absolute inset-0 bg-black/20 flex items-end p-6">
+          <p class="text-white font-serif font-medium text-lg">Mist Hovering Valleys</p>
+        </div>
+      </div>
+      <div class="rounded-2xl overflow-hidden aspect-square border border-surface bg-white relative group">
+        <img src="https://images.unsplash.com/photo-1449034446853-66c86144b0ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Eco resort exterior cabin views" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500">
+        <div class="absolute inset-0 bg-black/20 flex items-end p-6">
+          <p class="text-white font-serif font-medium text-lg">High-End Stone Cabins</p>
+        </div>
+      </div>
+      <div class="rounded-2xl overflow-hidden aspect-square border border-surface bg-white relative group">
+        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Organic Spice pathways" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500">
+        <div class="absolute inset-0 bg-black/20 flex items-end p-6">
+          <p class="text-white font-serif font-medium text-lg">Organic Spice Trails</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location highlighting Section -->
+  <section class="bg-surface py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        
+        <!-- Left content map placeholder block -->
+        <div class="bg-white p-6 rounded-3xl shadow-sm border border-surface space-y-6">
+          <span class="text-xs uppercase tracking-widest font-bold text-secondary">Our Mountain Coordinates</span>
+          <h2 class="text-xl md:text-2xl font-serif font-black text-primary">Upper Courtallam Gateway</h2>
+          
+          <!-- Realistic Map Viewport Map graphic with design style -->
+          <div class="w-full h-[320px] rounded-2xl bg-surface relative overflow-hidden flex flex-col justify-between p-6">
+            <div class="absolute inset-0 opacity-15">
+              <!-- Topographical contour grids placeholder -->
+              <svg viewBox="0 0 100 100" class="w-full h-full text-primary" fill="none" stroke="currentColor" stroke-width="0.5">
+                <path d="M0,50 Q25,20 50,50 T100,50" />
+                <path d="M0,60 Q25,30 50,60 T100,60" />
+                <path d="M0,40 Q25,10 50,40 T100,40" />
+                <path d="M0,70 Q25,40 50,70 T100,70" />
+              </svg>
+            </div>
+            
+            <div class="relative z-10 flex items-center justify-between">
+              <span class="bg-[#25D366]/10 text-[#25D366] text-[10px] font-bold px-3 py-1 rounded-full uppercase">Five Falls Walk Path: 500m</span>
+              <span class="bg-primary/10 text-primary text-[10px] font-bold px-3 py-1 rounded-full uppercase">Tenkasi Junction: 6km</span>
+            </div>
+
+            <!-- Pin detail layout -->
+            <div class="relative z-10 space-y-3">
+              <div class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-full bg-secondary text-white flex items-center justify-center shadow-lg">
+                  <span data-icon="location" class="w-4 h-4"></span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-primary">Courtallam Cottage</h4>
+                  <p class="text-[10px] uppercase text-on-surface-variant">Upper Courtallam Hill Ridge</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative z-10 bg-primary text-white p-4 rounded-xl text-xs flex justify-between items-center shadow-md">
+              <span>Find us easily with GPS Coordinates</span>
+              <a href="https://maps.google.com/?q=Shenbagadevi+Temple+Road+Courtallam+Tenkasi" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 bg-secondary text-white font-bold rounded-lg text-[10px] hover:opacity-90 uppercase">
+                Open Maps
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right facts block -->
+        <div class="space-y-6">
+          <span class="text-xs uppercase tracking-widest font-bold text-secondary block">Perfect Valley Logistics</span>
+          <h3 class="text-3xl md:text-5xl font-serif font-black text-primary leading-tight">
+            Secluded Privacy, Effortless Reach
+          </h3>
+          <p class="text-on-surface-variant text-sm md:text-base leading-relaxed font-sans">
+            Our homestay sits securely tucked into private estate hills along the Shenbagadevi Temple route. Uniquely distanced from tourist crowds to guarantee serene nights, yet located within brief, beautiful walking paths of the legendary falls.
+          </p>
+
+          <div class="grid grid-cols-2 gap-6 pt-4 text-sm font-sans">
+            <div class="border-t border-surface pt-4">
+              <span class="text-xs uppercase text-secondary font-bold font-sans">Walk to Falls</span>
+              <p class="text-lg md:text-xl font-serif font-bold text-primary mt-1">7 Minutes Path</p>
+              <p class="text-xs text-on-surface-variant mt-0.5">Walk beside cardamom groves directly to Five Falls.</p>
+            </div>
+            <div class="border-t border-surface pt-4">
+              <span class="text-xs uppercase text-secondary font-bold font-sans">Tenkasi Junction</span>
+              <p class="text-lg md:text-xl font-serif font-bold text-primary mt-1">15 Mins Drive</p>
+              <p class="text-xs text-on-surface-variant mt-0.5">Quick transit from Tenkasi train station (6 km).</p>
+            </div>
+            <div class="border-t border-surface pt-4">
+              <span class="text-xs uppercase text-secondary font-bold font-sans">Shenbagadevi path</span>
+              <p class="text-lg md:text-xl font-serif font-bold text-primary mt-1">Adjacent Trails</p>
+              <p class="text-xs text-on-surface-variant mt-0.5">Property aligns with the trekking hiking entrance.</p>
+            </div>
+            <div class="border-t border-surface pt-4">
+              <span class="text-xs uppercase text-secondary font-bold font-sans">Tuticorin Airport</span>
+              <p class="text-lg md:text-xl font-serif font-bold text-primary mt-1">2 Hrs Drive</p>
+              <p class="text-xs text-on-surface-variant mt-0.5">Closest air connection (approx 95 km).</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Reusable Call To Action Block -->
+  <section class="max-w-7xl mx-auto px-6 py-20 md:py-28">
+    <div id="home-cta"></div>
+  </section>
+
+  <!-- Reusable Dynamic Footer Container -->
+  <div id="footer-container"></div>
+
+  <!-- Central business config and scripts loads -->
+  <script src="assets/js/main.js?v=2026052801"></script>
+  <script src="components/header.js"></script>
+  <script src="components/footer.js"></script>
+  <script src="components/room-card.js"></script>
+  <script src="components/amenity-card.js"></script>
+  <script src="components/testimonial-card.js"></script>
+  <script src="components/cta-section.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Set hero date default inputs values
+      const heroIn = document.getElementById("hero-in");
+      const heroOut = document.getElementById("hero-out");
+      if (heroIn && heroOut) {
+        const today = new Date();
+        const formattedToday = today.toISOString().split("T")[0];
+        const tomorrow = new Date(today);
+        tomorrow.setDate(today.getDate() + 2);
+        const formattedTomorrow = tomorrow.toISOString().split("T")[0];
+
+        heroIn.min = formattedToday;
+        heroIn.value = formattedToday;
+        heroOut.min = formattedToday;
+        heroOut.value = formattedTomorrow;
+      }
+
+      // Load component blocks
+      renderRoomCards("featured-rooms-list", 2); // Featured limit = 2
+      renderAmenityCards("home-amenities-list");
+      renderTestimonialCards("testimonials-list", 3); // Testimonial limit = 3
+      renderEcoSanctuaryCTA("home-cta");
+    });
+  </script>
+</body>
+</html>

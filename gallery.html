@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery & Estate Visuals | Courtallam Cottage Homestay</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#344E41',
+            'primary-container': '#23382c',
+            secondary: '#588157',
+            background: '#FDFBF7',
+            surface: '#F4F0E6',
+            'on-surface-variant': '#414E45',
+            tertiary: '#1B2621',
+            wood: '#A3B18A',
+            ink: '#1B2621'
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['"Inter"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-[#fbf9f5] text-[#1b1c1a]">
+
+  <!-- Reusable Dynamic Header Container -->
+  <div id="header-container"></div>
+
+  <!-- Page Header Hero -->
+  <section class="bg-primary text-white py-20 md:py-32 px-6 relative overflow-hidden">
+    <!-- Fine-grain botanical forest backdrop -->
+    <div class="absolute inset-0">
+      <img 
+        src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
+        alt="Magnificent panoramic sunrise over Western Ghats mountains" 
+        referrerpolicy="no-referrer"
+        class="w-full h-full object-cover opacity-20" />
+      <div class="absolute inset-0 bg-gradient-to-t from-background via-black/30 to-[#173124]/40"></div>
+    </div>
+
+    <div class="max-w-4xl mx-auto text-center space-y-6 relative z-10 animate-fade-in">
+      <span class="text-xs uppercase tracking-widest font-bold text-secondary bg-surface/10 border border-white/10 px-4 py-1.5 rounded-full inline-block">
+        Photo Gallery
+      </span>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-black text-white tracking-tight">
+        A Visual Whisper of Silent Luxury
+      </h1>
+      <p class="text-white/85 max-w-xl mx-auto text-sm md:text-base leading-relaxed font-sans">
+        Immerse your gaze in our curated, organic image grids. Browse cottage architectural exteriors, natural teakwood interior layouts, cardamom groves, and neighboring waterfalls.
+      </p>
+    </div>
+  </section>
+
+  <!-- Interactive Filterable Portfolio Gallery section -->
+  <section class="max-w-7xl mx-auto px-6 py-20">
+    <div class="text-center max-w-2xl mx-auto space-y-4 mb-12">
+      <span class="text-xs uppercase tracking-widest font-bold text-secondary block">Estate Tag Filter</span>
+      <h2 class="text-3xl md:text-4xl font-serif font-black text-primary tracking-tight">
+        Browse Our Natural Sanctuary Spaces
+      </h2>
+      <p class="text-on-surface-variant text-sm font-sans">
+        Click options filters below to organize views. We maintain zero stock photos; each image displays high-fidelity real perspectives of Courtallam Cottage.
+      </p>
+    </div>
+
+    <!-- Container in which JS will render filter buttons dynamically -->
+    <div id="gallery-filters-container" class="mb-12"></div>
+
+    <!-- Container in which JS will render gallery list items dynamically -->
+    <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"></div>
+  </section>
+
+  <!-- Section: Waterfall surroundings narrative -->
+  <section class="bg-surface py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        
+        <!-- Left Side: Overlapping Image Cards -->
+        <div class="grid grid-cols-2 gap-4">
+          <div class="rounded-2xl overflow-hidden aspect-[4/5] shadow-md">
+            <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Beautiful old waterfalls cascades" class="w-full h-full object-cover">
+          </div>
+          <div class="rounded-2xl overflow-hidden aspect-[4/5] shadow-md mt-8">
+            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Lush nature trails" class="w-full h-full object-cover">
+          </div>
+        </div>
+
+        <!-- Right Side: Content description -->
+        <div class="space-y-6">
+          <span class="text-xs uppercase tracking-widest font-bold text-secondary block">Explore Upper Kuttralam</span>
+          <h2 class="text-3xl md:text-5xl font-serif font-black text-primary leading-tight">
+            The Enchanting Healing Winds of Courtallam
+          </h2>
+          <p class="text-on-surface-variant text-sm md:text-base leading-relaxed font-sans">
+            Known across South Asian legend as the "Natural Spa of India," Courtallam is where nine major waterfalls dive from the sky. The air here holds therapeutic benefits because the waters rinse over three thousand endangered botanical medicinal herbs before arriving on the rocks.
+          </p>
+          <p class="text-on-surface-variant text-sm md:text-base leading-relaxed font-sans">
+            Guests staying at Courtallam Cottage enjoy unique proximity keys to the Five Falls, Shenbagadevi, and tiger pools. Trek early in the morning through mist clouds to witness South India's premium monsoon sanctuaries in their rawest, purest splendor.
+          </p>
+          <div class="pt-4 flex items-center gap-6 text-sm font-sans font-bold text-primary">
+            <span class="flex items-center gap-1.5 justify-center">
+              <span data-icon="location" class="w-5 h-5 text-secondary"></span>
+              9 Sky Falls Closeby
+            </span>
+            <span class="flex items-center gap-1.5 justify-center">
+              <span data-icon="waterfall" class="w-5 h-5 text-secondary"></span>
+              3000+ Herb Species
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Reusable Call To Action Section -->
+  <section class="max-w-7xl mx-auto px-6 py-20 md:py-28">
+    <div id="gallery-cta"></div>
+  </section>
+
+  <!-- Reusable Dynamic Footer Container -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js?v=2026052801"></script>
+  <script src="components/header.js"></script>
+  <script src="components/footer.js"></script>
+  <script src="components/gallery-card.js"></script>
+  <script src="components/cta-section.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Direct render call of photo filter engine
+      renderGalleryCards("gallery-grid", "gallery-filters-container");
+      renderEcoSanctuaryCTA("gallery-cta");
+    });
+  </script>
+</body>
+</html>

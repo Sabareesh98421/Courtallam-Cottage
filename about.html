@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Story & About Us | Courtallam Cottage Premium Homestay</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#344E41',
+            'primary-container': '#23382c',
+            secondary: '#588157',
+            background: '#FDFBF7',
+            surface: '#F4F0E6',
+            'on-surface-variant': '#414E45',
+            tertiary: '#1B2621',
+            wood: '#A3B18A',
+            ink: '#1B2621'
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['"Inter"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-[#fbf9f5] text-[#1b1c1a]">
+
+  <!-- Reusable Dynamic Header Container -->
+  <div id="header-container"></div>
+
+  <!-- Page Header Hero -->
+  <section class="bg-primary text-white py-20 md:py-32 px-6 relative overflow-hidden">
+    <!-- Fine-grain botanical forest backdrop -->
+    <div class="absolute inset-0">
+      <img 
+        src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
+        alt="Lush green botanical organic resort" 
+        referrerpolicy="no-referrer"
+        class="w-full h-full object-cover opacity-20" />
+      <div class="absolute inset-0 bg-gradient-to-t from-background via-black/30 to-[#173124]/40"></div>
+    </div>
+
+    <div class="max-w-4xl mx-auto text-center space-y-6 relative z-10 animate-fade-in">
+      <span class="text-xs uppercase tracking-widest font-bold text-secondary bg-surface/10 border border-white/10 px-4 py-1.5 rounded-full inline-block">
+        Our Roots & Heritage
+      </span>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-black text-white tracking-tight">
+        Tucked into the Canopy of the Western Ghats
+      </h1>
+      <p class="text-white/85 max-w-xl mx-auto text-sm md:text-base leading-relaxed font-sans">
+        Discover how we transformed a family pepper grove plantation into Courtallam's most peaceful, hospitality-centric boutique eco-homestay.
+      </p>
+    </div>
+  </section>
+
+  <!-- Section 1: The Mountain Legacy Story -->
+  <section class="max-w-7xl mx-auto px-6 py-20 md:py-28">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      
+      <!-- Visual grid representation -->
+      <div class="relative">
+        <div class="rounded-3xl overflow-hidden aspect-[4/3] shadow-lg border border-surface">
+          <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Mist hovering over mountain plantation" class="w-full h-full object-cover">
+        </div>
+        <!-- Decorative inset absolute card -->
+        <div class="absolute -bottom-8 -right-4 md:-right-8 bg-secondary text-white p-6 rounded-2xl shadow-xl max-w-xs space-y-2 border-t-4 border-white font-sans">
+          <span class="text-[10px] uppercase tracking-widest font-bold text-white/70 block">Est. 2018</span>
+          <p class="font-serif font-medium text-lg text-white">"A dream to preserve natural spice corridors while sharing high-end boutique solace."</p>
+        </div>
+      </div>
+
+      <!-- Narrative columns -->
+      <div class="space-y-6">
+        <span class="text-xs uppercase tracking-widest font-bold text-secondary block">The Inspiration</span>
+        <h2 class="text-3xl md:text-5xl font-serif font-black text-primary leading-tight">
+          Crafted to Celebrate South India's Hill Sanctuaries
+        </h2>
+        <p class="text-on-surface-variant text-sm md:text-base leading-relaxed font-sans">
+          Courtallam (Kuttralam) is historically celebrated as the "Spa of South India" owing to how its therapeutic waterfall streams tumble down dense medicinal herb slopes. When our founders acquired this hillside acreage along the Shenbagadevi temple corridor, they sought to construct spaces honoring this ancient rejuvenation legacy.
+        </p>
+        <p class="text-on-surface-variant text-sm md:text-base leading-relaxed font-sans">
+          We designed our suites with a deliberate local mandate: structural teak timbers sourced from sustainable Tenkasi farms, local basalt stone layouts handcoded by regional artisans, and natural clay roof paneling creating comforting insulation from South India's summer temperatures.
+        </p>
+        <p class="text-on-surface-variant text-sm md:text-base leading-relaxed font-sans font-semibold">
+          Step back into a world where clock parameters drop away, replaced by the natural rhythms of cascading waterfalls and bird calls.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 2: Core Eco Pillars of Rejuvenation -->
+  <section class="bg-surface py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-6 space-y-16">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-4">
+        <span class="text-xs uppercase tracking-widest font-bold text-secondary block">How We Live & Coexist</span>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif font-black text-primary tracking-tight">
+          Our Five Pillars of Boutique Solace
+        </h2>
+        <p class="text-on-surface-variant text-sm font-sans">
+          We balance premium amenities for global vacation standards with strict steps to honor and preserve local nature.
+        </p>
+      </div>
+
+      <!-- Grid layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <div class="bg-white p-8 rounded-2xl border border-surface space-y-4 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 rounded-xl bg-surface text-secondary flex items-center justify-center font-bold">1</div>
+          <h3 class="text-xl font-serif font-bold text-primary">Monsoon Water Harvesting</h3>
+          <p class="text-sm text-on-surface-variant font-sans leading-relaxed">
+            Our estate grounds capture rain runoff streams, channeling pure water safely into private reservoirs protecting the valley soil from standard erosion.
+          </p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl border border-surface space-y-4 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 rounded-xl bg-surface text-secondary flex items-center justify-center font-bold">2</div>
+          <h3 class="text-xl font-serif font-bold text-primary">Estate Organic Cultivation</h3>
+          <p class="text-sm text-on-surface-variant font-sans leading-relaxed">
+            We avoid any synthetic fertilizers. Handpicked cardamoms, rambutans, nutmegs, and curry leaves are grown naturally, available directly at your dining tables.
+          </p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl border border-surface space-y-4 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 rounded-xl bg-surface text-secondary flex items-center justify-center font-bold">3</div>
+          <h3 class="text-xl font-serif font-bold text-primary">Support Regional Artisans</h3>
+          <p class="text-sm text-on-surface-variant font-sans leading-relaxed">
+            From our handwoven rattan lounge chairs to hand-crafted kitchenware, everything is commissioned directly from local community craftsmen to boost nearby village economies.
+          </p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl border border-surface space-y-4 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 rounded-xl bg-surface text-secondary flex items-center justify-center font-bold">4</div>
+          <h3 class="text-xl font-serif font-bold text-primary">Quiet Nature Integration</h3>
+          <p class="text-sm text-on-surface-variant font-sans leading-relaxed">
+            We purposefully keep loud sound speakers and televisions limited to specific spaces, preserving the calming, medicinal mountain stream acoustics for pristine sleep routing.
+          </p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl border border-surface space-y-4 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 rounded-xl bg-surface text-secondary flex items-center justify-center font-bold">5</div>
+          <h3 class="text-xl font-serif font-bold text-primary">Uncompromising Sanitization</h3>
+          <p class="text-sm text-on-surface-variant font-sans leading-relaxed">
+            Pure white linens, thoroughly sanitized porcelain bathroom fittings, organic certified toiletries, and strict deep-cleans before every check-in.
+          </p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl border border-surface space-y-4 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 rounded-xl bg-surface text-secondary flex items-center justify-center font-bold">6</div>
+          <h3 class="text-xl font-serif font-bold text-primary">Banana-leaf Gastronomy</h3>
+          <p class="text-sm text-on-surface-variant font-sans leading-relaxed">
+            Freshly crushed spices cooked slowly on clay ovens. We serve homestyle regional recipes that stay true to thousands of years of South Indian culinary heritage.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Walkthrough block section -->
+  <section class="max-w-7xl mx-auto px-6 py-20 md:py-28">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      
+      <div class="space-y-6">
+        <span class="text-xs uppercase tracking-widest font-bold text-secondary block">Estate Gardens Walkthrough</span>
+        <h2 class="text-3xl md:text-5xl font-serif font-black text-primary leading-tight">
+          Explore our Private Cardamom & Spice Groves
+        </h2>
+        <p class="text-on-surface-variant text-sm md:text-base leading-relaxed font-sans">
+          During your stay, we invite you to join our farm concierge team for a morning estate trail. Observe how black pepper vines wrap themselves carefully around tall silver-oak trunks, and learn of the delicate harvesting cycle of high-altitude nutmeg seeds.
+        </p>
+        <p class="text-on-surface-variant text-sm md:text-base leading-relaxed font-sans">
+          Our paths lead directly to a private, secure riverside viewing patio built right over the seasonal forest stream where you can dip your feet and watch local birds drink from natural plunge pools.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 pt-4">
+          <a href="rooms.html" class="px-6 py-3.5 bg-primary text-white text-xs uppercase tracking-widest font-semibold rounded-full hover:bg-primary/95 hover:scale-[1.01] transition-all text-center">
+            Select Your Cottage Room
+          </a>
+          <a href="gallery.html" class="px-6 py-3.5 border border-primary text-primary text-xs uppercase tracking-widest font-semibold rounded-full hover:bg-primary hover:text-white transition-all text-center">
+            View Estate Landscape Visuals
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-3xl overflow-hidden aspect-[4/5] shadow-lg border border-surface relative group">
+        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Spectacular stone cottage patio views" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-8 md:p-12 text-white">
+          <div class="space-y-2">
+            <span class="text-xs text-secondary uppercase tracking-widest font-bold">Sanctuary Walkways</span>
+            <h4 class="text-2xl font-serif font-bold">Nature trails connecting directly with misty hill slopes</h4>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Reusable Call To Action Block -->
+  <section class="max-w-7xl mx-auto px-6 py-20 md:py-28">
+    <div id="about-cta"></div>
+  </section>
+
+  <!-- Reusable Dynamic Footer Container -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js?v=2026052801"></script>
+  <script src="components/header.js"></script>
+  <script src="components/footer.js"></script>
+  <script src="components/cta-section.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      renderEcoSanctuaryCTA("about-cta", true); // Alternative clay secondary CTA theme
+    });
+  </script>
+</body>
+</html>
