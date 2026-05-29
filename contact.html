@@ -87,7 +87,7 @@
             </div>
             <h3 class="font-serif font-bold text-lg text-primary leading-none">Call Our Desk</h3>
             <p class="text-xs text-on-surface-variant">General consults and travel coordinates:</p>
-            <a href="tel:+919842127812" class="font-bold text-primary hover:text-secondary block font-sans">+91 98421 27812</a>
+            <a id="contact-phone-link" href="#" class="font-bold text-primary hover:text-secondary block font-sans"></a>
           </div>
 
           <div class="bg-white p-6 rounded-2xl border border-surface space-y-3 shadow-sm">
@@ -96,7 +96,7 @@
             </div>
             <h3 class="font-serif font-bold text-lg text-primary leading-none">Email Stay Inbox</h3>
             <p class="text-xs text-on-surface-variant">Group event booking and corporate rates:</p>
-            <a href="mailto:stay@courtallamcottage.com" class="font-bold text-primary hover:text-secondary block font-sans truncate">stay@courtallamcottage.com</a>
+            <a id="contact-email-link" href="#" class="font-bold text-primary hover:text-secondary block font-sans truncate"></a>
           </div>
 
           <div class="bg-white p-6 rounded-2xl border border-surface space-y-3 shadow-sm sm:col-span-2">
@@ -105,9 +105,7 @@
             </div>
             <h3 class="font-serif font-bold text-lg text-primary leading-none">Physical Homestead Address</h3>
             <p class="text-xs text-on-surface-variant">Upper Courtallam Hill Ridge corridor:</p>
-            <p class="font-medium text-primary font-sans leading-relaxed">
-              14/3, Shenbagadevi Temple Road, Upper Courtallam, Tenkasi District, Tamil Nadu - 627802
-            </p>
+            <p id="contact-address-text" class="font-medium text-primary font-sans leading-relaxed"></p>
           </div>
 
         </div>
@@ -121,7 +119,7 @@
             <h4 class="font-serif font-bold text-lg text-primary">Chat Live with Concierge</h4>
             <p class="text-xs text-on-surface-variant leading-relaxed">Skip long forms. Text us instantly on WhatsApp for quick pricing details and room options confirmation.</p>
           </div>
-          <a href="https://wa.me/919842127812?text=Hello%20Courtallam%20Cottage%20team!%20I'd%20love%20to%20know%20availability%20for%20private%20rooms." target="_blank" rel="noopener" class="px-5 py-3 bg-[#25D366] hover:bg-[#20ba59] active:scale-95 text-white font-bold rounded-xl text-center text-xs tracking-wider uppercase font-sans shadow-md hover:scale-[1.01] transition-transform cursor-pointer">
+          <a id="contact-whatsapp-link" href="#" target="_blank" rel="noopener" class="px-5 py-3 bg-[#25D366] hover:bg-[#20ba59] active:scale-95 text-white font-bold rounded-xl text-center text-xs tracking-wider uppercase font-sans shadow-md hover:scale-[1.01] transition-transform cursor-pointer">
             Chat on WhatsApp
           </a>
         </div>
@@ -171,89 +169,46 @@
     </div>
   </section>
 
-  <!-- Interactive Embedded Map Section Block -->
-  <section class="bg-surface py-20">
-    <div class="max-w-7xl mx-auto px-6 space-y-12">
-      <div class="text-center max-w-xl mx-auto space-y-3">
-        <span class="text-xs uppercase tracking-widest font-bold text-secondary">Our Geographical Context</span>
-        <h2 class="text-2xl md:text-3xl font-serif font-black text-primary">Upper Courtallam Foothills Map</h2>
-        <p class="text-on-surface-variant text-xs font-sans">
-          Arrive via direct rail loops to Tenkasi Junction (6km) or fly to Tuticorin Airport (2h drive). Scroll details or tap to trigger direct driving navigation.
-        </p>
-      </div>
-
-
-
-<!-- Embedded Google Map -->
-<div class="rounded-3xl border border-surface overflow-hidden shadow-sm relative h-[450px] bg-white">
-
-  <!-- Real Google Maps Embed -->
-  <iframe
-    src="https://www.google.com/maps?q=Courtallam%20Cottage&output=embed"
-    class="absolute inset-0 w-full h-full border-0"
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-    allowfullscreen>
-  </iframe>
-<!-- Interactive Map Pin -->
-<div class="absolute left-[58%] top-[43%] z-20">
-
-  <!-- Pulse -->
-  <span class="absolute inline-flex h-12 w-12 rounded-full bg-secondary/40 animate-ping"></span>
-
-  <!-- Pin -->
-  <div class="relative w-12 h-12 rounded-full bg-secondary shadow-2xl border-4 border-white flex items-center justify-center animate-bounce">
-    <span data-icon="location" class="w-6 h-6 text-white"></span>
-  </div>
-
-  <!-- Label -->
-  <div class="absolute top-14 left-1/2 -translate-x-1/2 whitespace-nowrap px-4 py-1.5 rounded-full bg-primary text-white text-[10px] uppercase tracking-widest font-bold shadow-xl">
-    Courtallam Cottage
-  </div>
-
-</div>
-  <!-- Dark overlay for readability -->
-  <div class="absolute inset-0 bg-black/10 pointer-events-none"></div>
-
-  <!-- Float Map Fact Board -->
-  <div class="relative z-10 h-full flex items-end p-8 md:p-12">
-    <div class="bg-[#173124]/95 text-white p-6 md:p-8 rounded-2xl max-w-md border border-white/10 space-y-4 shadow-xl backdrop-blur-sm">
-      <div class="flex items-center gap-2">
-        <span data-icon="location" class="w-5 h-5 text-secondary"></span>
-        <h4 class="font-serif font-bold text-lg">Detailed Driving Landmark</h4>
-      </div>
-
-      <p class="text-xs text-white/80 leading-relaxed font-sans">
-        Proceed up the Shenbagadevi Temple pathway road just beyond the Forest Gate checkpost. Follow our wooden botanical road tags for 400 meters.
-      </p>
-
-      <a
-        href="https://maps.app.goo.gl/ikgFgGb4HUN9gTSt8"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="w-full text-center block py-3 bg-secondary text-white text-xs uppercase tracking-widest font-semibold rounded-xl hover:bg-secondary/95 transition-transform duration-300 hover:scale-[1.01] cursor-pointer shadow"
-      >
-        Open in Google Maps
-      </a>
-    </div>
-  </div>
-</div>
-
-    </div>
-  </section>
+  <!-- Reusable map section container -->
+  <div id="contact-map-section"></div>
 
   <!-- Reusable Dynamic Footer Container -->
   <div id="footer-container"></div>
 
   <!-- Scripts -->
+  <script src="assets/js/business_config.js?v=2026052801"></script>
   <script src="assets/js/main.js?v=2026052801"></script>
   <script src="components/header.js"></script>
   <script src="components/footer.js"></script>
+  <script src="components/map-section.js"></script>
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
+      const phoneLink = document.getElementById("contact-phone-link");
+      const emailLink = document.getElementById("contact-email-link");
+      const addressText = document.getElementById("contact-address-text");
+      const waLink = document.getElementById("contact-whatsapp-link");
+
+      if (phoneLink) {
+        phoneLink.href = `tel:${BUSINESS_CONFIG.phoneRaw}`;
+        phoneLink.textContent = BUSINESS_CONFIG.phone;
+      }
+      if (emailLink) {
+        emailLink.href = `mailto:${BUSINESS_CONFIG.email}`;
+        emailLink.textContent = BUSINESS_CONFIG.email;
+      }
+      if (addressText) {
+        addressText.textContent = BUSINESS_CONFIG.address;
+      }
+      if (waLink) {
+        waLink.href = BUSINESS_CONFIG.getWhatsAppLink(
+          `Hello ${BUSINESS_CONFIG.name} team! I'd love to know availability for private rooms.`
+        );
+      }
+
       // Form submit action linking WhatsApp
       const eqnForm = document.getElementById("contact-enquiry-form");
+      renderContactMapSection("contact-map-section");
       if (eqnForm) {
         eqnForm.addEventListener("submit", (e) => {
           e.preventDefault();
@@ -271,7 +226,7 @@ Email: ${email}
 Subject: ${subject}
 Message: ${message}
 -----------------------------------------
-Hello Courtallam Cottage team! I am writing using your web contact form. Please confirm parameters when free. Thank you!`;
+Hello ${BUSINESS_CONFIG.name} team! I am writing using your web contact form. Please confirm parameters when free. Thank you!`;
 
           window.open(BUSINESS_CONFIG.getWhatsAppLink(waText), "_blank");
         });

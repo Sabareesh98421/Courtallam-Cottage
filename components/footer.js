@@ -4,20 +4,23 @@ function injectFooter() {
   if (!container) return;
 
   // Pillar 1: Brand details
-  const p1LogoCircle = createDOMElement("div", {
-    class: "w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-white text-xl font-serif font-bold tracking-tight"
-  }, "CC");
+  const p1LogoImg = createDOMElement("img", {
+    src: "assets/svgs/website_logo.svg",
+    alt: "Courtallam Cottage Logo",
+    class: "w-10 h-10 object-contain",
+    style: "scale: 3.5;"
+  });
 
   const p1LogoTitle = createDOMElement("h2", {
     class: "text-xl font-serif font-bold text-white tracking-wide"
-  }, "Courtallam Cottage");
+  }, BUSINESS_CONFIG.name);
 
   const p1LogoSub = createDOMElement("p", {
     class: "text-[10px] uppercase tracking-widest text-[#bcaba0] font-semibold"
   }, "Boutique Eco Homestay");
 
   const p1LogoText = createDOMElement("div", {}, p1LogoTitle, p1LogoSub);
-  const p1Header = createDOMElement("div", { class: "flex items-center gap-3" }, p1LogoCircle, p1LogoText);
+  const p1Header = createDOMElement("div", { class: "flex items-center gap-3" }, p1LogoImg, p1LogoText);
 
   const p1Desc = createDOMElement("p", {
     class: "text-sm text-[#bcaba0] leading-relaxed font-sans"
@@ -120,7 +123,7 @@ function injectFooter() {
 
   // Legal Bar
   const legalText = createDOMElement("p", { class: "text-xs text-[#bcaba0] font-sans" }, 
-    `© ${new Date().getFullYear()} Courtallam Cottage. All Rights Reserved. Designed for premium eco-getaways.`
+    `© ${new Date().getFullYear()} ${BUSINESS_CONFIG.name}. All Rights Reserved. Designed for premium eco-getaways.`
   );
 
   const privacyLink = createDOMElement("a", { href: "#", class: "hover:text-white transition-colors" }, "Privacy Policy");
@@ -137,6 +140,10 @@ function injectFooter() {
 
   container.innerHTML = "";
   container.appendChild(footer);
+
+  if (typeof injectSVGIcons === "function") {
+    injectSVGIcons();
+  }
 }
 
 // Automatically trigger injection on script load or DOM-load

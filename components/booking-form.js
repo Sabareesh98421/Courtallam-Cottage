@@ -234,7 +234,8 @@ function renderBookingForm(containerId, pricingBreakoutId) {
     }
 
     const basePrice = room.priceMin * nights;
-    const taxes = Math.round(basePrice * BUSINESS_CONFIG.pricing.taxRate);
+    const hasTax = typeof BUSINESS_CONFIG.pricing.taxRate === "number" && BUSINESS_CONFIG.pricing.taxRate > 0;
+    const taxes = hasTax ? Math.round(basePrice * BUSINESS_CONFIG.pricing.taxRate) : 0;
     const total = basePrice + taxes;
 
     const breakH3 = createDOMElement("h3", {
@@ -256,14 +257,19 @@ function renderBookingForm(containerId, pricingBreakoutId) {
       createDOMElement("span", { class: "font-bold text-primary" }, formatCurrency(basePrice))
     );
 
-    const taxRow = createDOMElement("div", { class: "flex items-center justify-between" },
-      createDOMElement("span", {}, "Taxes & Fees (12% GST)"),
-      createDOMElement("span", {}, formatCurrency(taxes))
-    );
+    const specsChildren = [rateRow, durRow, subRow];
+
+    if (hasTax) {
+      const taxRow = createDOMElement("div", { class: "flex items-center justify-between" },
+        createDOMElement("span", {}, `Taxes & Fees (${BUSINESS_CONFIG.pricing.taxRate * 100}% GST)`),
+        createDOMElement("span", {}, formatCurrency(taxes))
+      );
+      specsChildren.push(taxRow);
+    }
 
     const specsBlock = createDOMElement("div", {
       class: "space-y-2 text-sm text-on-surface-variant font-sans"
-    }, rateRow, durRow, subRow, taxRow);
+    }, ...specsChildren);
 
     const totalRow = createDOMElement("div", {
       class: "pt-4 border-t border-surface flex items-center justify-between"
@@ -323,6 +329,14 @@ function renderBookingForm(containerId, pricingBreakoutId) {
       const end = new Date(checkOut);
       const nights = Math.ceil((end.getTime() - start.getTime()) / (1000 * 3600 * 24)) || 1;
 
+      const basePrice = room ? room.priceMin * nights : 0;
+      const hasTax = typeof BUSINESS_CONFIG.pricing.taxRate === "number" && BUSINESS_CONFIG.pricing.taxRate > 0;
+      const taxes = hasTax ? Math.round(basePrice * BUSINESS_CONFIG.pricing.taxRate) : 0;
+      const total = basePrice + taxes;
+      const rateBreakdownText = hasTax 
+        ? `${formatCurrency(total)} (incl. ${BUSINESS_CONFIG.pricing.taxRate * 100}% GST)` 
+        : `${formatCurrency(basePrice)}`;
+
       // Formulate detailed, extremely polite professional WhatsApp text message
       const waMessage = `✨ NEW RESERVATION REQUEST ✨
 -----------------------------------------
@@ -333,9 +347,9 @@ Check-In: ${checkIn}
 Check-Out: ${checkOut}
 Total Duration: ${nights} night(s)
 Guests Layout: ${guests} adult(s) + ${children} child(ren)
-Approximate Rate: ${formatCurrency(room ? (room.priceMin * nights) + Math.round(room.priceMin * nights * 0.12) : 0)} (with GST)
+Approximate Rate: ${rateBreakdownText}
 -----------------------------------------
-Hello Courtallam Cottage team! I've selected dates using your web dashboard reservation form. Could you please confirm room block and send payment details is available? Thank you!`;
+Hello ${BUSINESS_CONFIG.name} team! I've selected dates using your web dashboard reservation form. Could you please confirm room block and send payment details is available? Thank you!`;
 
       // Redirect of WhatsApp page links
       window.open(BUSINESS_CONFIG.getWhatsAppLink(waMessage), "_blank");

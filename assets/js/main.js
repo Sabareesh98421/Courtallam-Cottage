@@ -25,33 +25,9 @@ function createDOMElement(tag, attributes = {}, ...children) {
   return element;
 }
 
-// Centralized Business Configuration for Courtallam Cottage
-const BUSINESS_CONFIG = {
-  name: "Courtallam Cottage",
-  tagline: "Where the Western Ghats waterfalls meet luxurious living",
-  desc: "Nestled in the lush, mist-kissed foothills of Courtallam (Kuttralam) in Tamil Nadu, our premium eco-homestay offers a peaceful sanctuary. Escape the hustle of city life to surround yourself with private orchards, seasonal forest streams, and majestic mountain views—all while enjoying warm, boutique South Indian hospitality.",
-  phone: "+91 98421 27812",
-  phoneRaw: "919842127812",
-  email: "stay@courtallamcottage.com",
-  address: "14/3, Shenbagadevi Temple Road, Upper Courtallam, Tenkasi District, Tamil Nadu - 627802",
-  googleMapsLink: "https://maps.google.com/?q=Shenbagadevi+Temple+Road+Courtallam+Tenkasi",
-  socials: {
-    instagram: "https://instagram.com/courtallamcottage",
-    facebook: "https://facebook.com/courtallamcottage",
-  },
-  
-  // Dynamic pricing info
-  pricing: {
-    currency: "₹",
-    taxRate: 0.12,
-  },
-
-  // WhatsApp Deep Link Generator
-  getWhatsAppLink: function(messageText) {
-    const text = encodeURIComponent(messageText || "Hello! I am interested in booking a stay at Courtallam Cottage. Could you please share availability?");
-    return `https://wa.me/${this.phoneRaw}?text=${text}`;
-  }
-};
+if (typeof BUSINESS_CONFIG === "undefined") {
+  throw new Error("BUSINESS_CONFIG is not loaded. Include assets/js/business_config.js before assets/js/main.js.");
+}
 
 // Rooms Data Array
 const ROOMS_DATA = [
@@ -181,26 +157,6 @@ const GALLERY_DATA = [
   }
 ];
 
-// Reusable SVG Path Fallback Library
-const SVG_FALLBACKS = {
-  wifi: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><path d="M5 12.55a11 11 0 0 1 14.08 0"></path><path d="M1.42 9a16 16 0 0 1 21.16 0"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line x1="12" y1="20" x2="12.01" y2="20"></line></svg>`,
-  email: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>`,
-  phone: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 9.24v3z"></path></svg>`,
-  location: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>`,
-  menu: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>`,
-  close: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>`,
-  star: `<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>`,
-  whatsapp: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><path d="M17.439 14.65c-.215-.11-.77-.38-.89-.425-.12-.045-.255-.06-.39.12-.135.18-.525.66-.645.8-.12.135-.24.15-.455.045a7.518 7.518 0 01-2.92-1.8 8.286 8.286 0 01-2.025-2.52c-.12-.215-.015-.33.09-.435.09-.11.21-.24.315-.36.105-.12.135-.21.21-.345.075-.135.03-.255-.015-.36-.045-.105-.39-.945-.54-1.305-.143-.347-.291-.347-.39-.347h-.33c-.12 0-.315.045-.48.225-.165.18-.63.615-.63 1.5s.645 1.74.735 1.86c.09.12 1.258 1.92 3.05 2.693.426.183.759.293 1.018.376.43.136.821.117 1.13.07.345-.053 1.058-.433 1.208-.85.15-.417.15-.775.105-.85-.045-.075-.165-.12-.38-.23z"></path><path d="M12.004 2a9.995 9.995 0 00-8.684 14.989l-1.314 4.8 4.908-1.288A9.995 9.995 0 1012.004 2z"></path></svg>`,
-  waterfall: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><path d="M3 13h18"></path><path d="M3 7h18"></path><path d="M5 21l3-18"></path><path d="M19 21l-3-18"></path><path d="M12 21h.01"></path><path d="M12 17h.01"></path><path d="M12 13h.01"></path><path d="M12 9h.01"></path></svg>`,
-  parking: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><path d="M9 17V7h4a3 3 0 0 1 0 6H9"></path></svg>`,
-  calendar: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>`,
-  guests: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>`,
-  bed: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><path d="M2 4v16"></path><path d="M2 11h20"></path><path d="M22 4v16"></path><path d="M2 17h20"></path><path d="M6 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path></svg>`,
-  chevron_left: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><polyline points="15 18 9 12 15 6"></polyline></svg>`,
-  chevron_right: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><polyline points="9 18 15 12 9 6"></polyline></svg>`,
-  restaurant: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2z"></path><path d="M12 6v6l4 2"></path></svg>`,
-};
-
 // SVG Icon Cache - Load icons once and reuse them
 const SVG_CACHE = {
   icons: {},
@@ -212,26 +168,19 @@ const SVG_CACHE = {
     const iconNames = [
       'bed', 'calendar', 'chevron_left', 'chevron_right', 'close', 'email',
       'guests', 'location', 'menu', 'parking', 'phone', 'restaurant',
-      'star', 'waterfall', 'whatsapp', 'wifi'
+      'star', 'waterfall', 'whatsapp', 'wifi', 'instagram', 'facebook'
     ];
     
     for (const name of iconNames) {
-      // Always try to fetch fresh SVG files first (with cache-buster)
       try {
         const response = await fetch(`assets/svgs/${name}.svg?v=${this.CACHE_VERSION}`, {
           cache: 'no-store'
         });
         if (response.ok) {
           this.icons[name] = await response.text();
-          continue;
         }
       } catch (e) {
-        // Fall through to fallback if fetch fails
-      }
-      
-      // Fallback to inline SVG if file not found
-      if (SVG_FALLBACKS[name]) {
-        this.icons[name] = SVG_FALLBACKS[name];
+        console.warn(`[SVG Cache] Failed to load icon file: ${name}`, e);
       }
     }
   },
@@ -377,7 +326,7 @@ function injectFloatingWhatsApp() {
 
   const whatsappIcon = createDOMElement("div", {
     "data-icon": "whatsapp",
-    class: "w-7 h-7 text-white"
+    class: "w-6 h-6 text-white"
   });
 
   const link = createDOMElement("a", {

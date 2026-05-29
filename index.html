@@ -278,7 +278,7 @@
 
             <div class="relative z-10 bg-primary text-white p-4 rounded-xl text-xs flex justify-between items-center shadow-md">
               <span>Find us easily with GPS Coordinates</span>
-              <a href="https://maps.google.com/?q=Shenbagadevi+Temple+Road+Courtallam+Tenkasi" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 bg-secondary text-white font-bold rounded-lg text-[10px] hover:opacity-90 uppercase">
+              <a href="#" id="home-map-link" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 bg-secondary text-white font-bold rounded-lg text-[10px] hover:opacity-90 uppercase">
                 Open Maps
               </a>
             </div>
@@ -332,6 +332,7 @@
   <div id="footer-container"></div>
 
   <!-- Central business config and scripts loads -->
+  <script src="assets/js/business_config.js?v=2026052801"></script>
   <script src="assets/js/main.js?v=2026052801"></script>
   <script src="components/header.js"></script>
   <script src="components/footer.js"></script>
@@ -342,6 +343,11 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
+      const homeMapLink = document.getElementById("home-map-link");
+      if (homeMapLink) {
+        homeMapLink.href = BUSINESS_CONFIG.googleMapsLink;
+      }
+
       // Set hero date default inputs values
       const heroIn = document.getElementById("hero-in");
       const heroOut = document.getElementById("hero-out");

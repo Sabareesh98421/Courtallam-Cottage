@@ -60,9 +60,12 @@ function injectHeader() {
   }, mobileNavContainer);
 
   // Logo / Brand Emblem
-  const logoCircle = createDOMElement("div", {
-    class: "w-10 h-10 rounded-full bg-primary flex items-center justify-center text-background text-xl font-serif font-bold tracking-tight shadow-md transition-transform group-hover:scale-105"
-  }, "CC");
+  const logoImg = createDOMElement("img", {
+    src: "assets/svgs/website_logo.svg",
+    alt: "Courtallam Cottage Logo",
+    class: "w-10 h-10 object-contain transition-transform group-hover:scale-105",
+    style: "scale: 3.5;"
+  });
 
   const logoTitle = createDOMElement("h1", {
     class: "text-xl md:text-2xl font-serif font-bold text-primary tracking-tight"
@@ -77,7 +80,7 @@ function injectHeader() {
   const brandLink = createDOMElement("a", {
     href: "index.html",
     class: "flex items-center gap-3 group"
-  }, logoCircle, logoText);
+  }, logoImg, logoText);
 
   // Desktop Navigation Actions
   const desktopNav = createDOMElement("nav", { class: "hidden md:block" }, desktopNavList);
@@ -108,6 +111,10 @@ function injectHeader() {
 
   container.innerHTML = "";
   container.appendChild(header);
+
+  if (typeof injectSVGIcons === "function") {
+    injectSVGIcons();
+  }
 }
 
 // Automatically trigger injection on script load or DOM-load
