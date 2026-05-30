@@ -229,22 +229,6 @@ function injectSVGIcons() {
     const iconName = el.getAttribute("data-icon");
     if (!iconName) return;
 
-    // Mark as injected to prevent re-processing
-    el.setAttribute("data-icon-injected", "true");
-
-    // Apply proper display style to ensure the wrapper element obeys width/height Tailwind classes
-    const tagName = el.tagName.toLowerCase();
-    if (tagName === "span") {
-      el.style.display = "inline-flex";
-      el.style.alignItems = "center";
-      el.style.justifyContent = "center";
-      el.style.verticalAlign = "middle";
-    } else if (tagName === "div") {
-      if (!el.style.display || el.style.display === "inline") {
-        el.style.display = "block";
-      }
-    }
-
     // Get classes and title from element
     const classes = el.getAttribute("class") || "w-6 h-6 text-current";
     const title = el.getAttribute("title") || "";
@@ -252,6 +236,22 @@ function injectSVGIcons() {
     // Get cached SVG and inject
     const svg = SVG_CACHE.getSVG(iconName, classes, title);
     if (svg) {
+      // Mark as injected to prevent re-processing
+      el.setAttribute("data-icon-injected", "true");
+
+      // Apply proper display style to ensure the wrapper element obeys width/height Tailwind classes
+      const tagName = el.tagName.toLowerCase();
+      if (tagName === "span") {
+        el.style.display = "inline-flex";
+        el.style.alignItems = "center";
+        el.style.justifyContent = "center";
+        el.style.verticalAlign = "middle";
+      } else if (tagName === "div") {
+        if (!el.style.display || el.style.display === "inline") {
+          el.style.display = "block";
+        }
+      }
+
       el.innerHTML = "";
       el.appendChild(svg);
     } else {
@@ -302,6 +302,7 @@ function setupMobileMenu() {
       mobileNav.classList.remove("hidden");
       mobileNav.classList.add("flex");
       if (btnIcon) {
+        btnIcon.removeAttribute("data-icon-injected");
         btnIcon.setAttribute("data-icon", "close");
         injectSVGIcons();
       }
@@ -309,6 +310,7 @@ function setupMobileMenu() {
       mobileNav.classList.add("hidden");
       mobileNav.classList.remove("flex");
       if (btnIcon) {
+        btnIcon.removeAttribute("data-icon-injected");
         btnIcon.setAttribute("data-icon", "menu");
         injectSVGIcons();
       }
